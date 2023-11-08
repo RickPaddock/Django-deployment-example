@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% extends "basic_app/base.html" %}
+    {%block body_block %}
+        <h1>WELCOME TO INDEX</h1>
+        <p></p>
+        <h2>I've inherited the style from base.html</h2>
+        <p></p>
+        <h3>Here are some values injected from basic_app/views.py</h3>
+        <p>TEXT unchanged: {{ text }}</p>
+        <p>NUMBER unchanged: {{ number }}</p>
+        <p></p>
+        <h4>.... these have been changed with built in filters ....</h4>
+        <p></p>
+        <p>TEXT upper: {{ text|upper }}</p>
+        <p>NUMBER + 99: {{ number|add:"99" }}</p>
+        <p></p>
+        <h4>.... this has been changed with custom filters ....</h4>
+        <p></p>
+        <p>TEXT cut: {{ text|cut:'Hello' }}</p>
+    {% endblock %}
